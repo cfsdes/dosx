@@ -1,8 +1,6 @@
-module dosx
+module github.com/cfsdes/dosx
 
 go 1.21.3
-
-replace dosx/internal => ./internal
 
 require github.com/fatih/color v1.15.0
 
