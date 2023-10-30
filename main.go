@@ -8,7 +8,7 @@ import (
 	"time"
 	"strings"
 
-	"github.com/cfsdes/dosx"
+	"github.com/cfsdes/dosx/internal"
 	"github.com/fatih/color"
 )
 
