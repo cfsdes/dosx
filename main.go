@@ -46,7 +46,7 @@ func main() {
 				url := internal.Url
 
 				// Criar uma nova requisição com os cabeçalhos personalizados
-				req, err := http.NewRequest("GET", url, nil)
+				req, err := http.NewRequest(internal.Method, url, nil)
 				if err != nil {
 					fmt.Printf("Erro ao criar a requisição: %v\n", err)
 					return

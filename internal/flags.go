@@ -19,8 +19,9 @@ func (h *headersFlag) Set(value string) error {
 	return nil
 }
 
-func ParseFlags() (url string, threads int, headers headersFlag) {
+func ParseFlags() (url string, method string, threads int, headers headersFlag) {
 	flag.StringVar(&url, "url", "", "Target URL (e.g.: https://example.com/)")
+    flag.StringVar(&method, "method", "GET", "HTTP Method to use (e.g: GET, POST..)")
     flag.IntVar(&threads, "threads", 10, "Threads to use during plugin scan (default: 10)")
     flag.Var(&headers, "headers", "Set custom headers. Accept multiple flag usages.") // Accept multiple flag usages
 
@@ -43,7 +44,7 @@ func PrintFlagsByTopic() {
 
     // Define os tópicos e as flags correspondentes
     topics := map[string][]string{
-        "Flags": []string{"url", "threads", "headers"},
+        "Flags": []string{"url", "method", "threads", "headers"},
     }
 
     // Imprime as flags por tópico
